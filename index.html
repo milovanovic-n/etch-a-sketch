@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!--Title-->
+  <h1 id="title">Etch a Sketch</h1>
+
+  <div class="main">
+    <!--Sidebar-->
+    <aside class="sidebar">
+			<button id="clear" class="clearBtn">Clear</button>
+      <div class="sizeContainer">
+        <span id="displaySize">16x16</span>
+        <input id="size" type="range" value="16" step="1" max="64">
+      </div>
+  	</aside>
+
+    <!--Grid Container-->
+    <div id="container">
+
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
