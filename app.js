@@ -1,7 +1,13 @@
+/* Set Default Values */
+let defaultColor = "#454545";
+let defaultSize = 16;
+
+/* Select Elements */
 const container = document.querySelector("#container");
 const btnClear = document.querySelector("#clear");
 const inputSize = document.querySelector("#size");
 const displaySize = document.querySelector("#displaySize");
+const color = document.querySelector("#color");
 
 /* If user changes size - display that size */
 inputSize.addEventListener("mousemove", function() {
@@ -10,14 +16,17 @@ inputSize.addEventListener("mousemove", function() {
 
 /* Make new grid on size change */
 inputSize.addEventListener("change", function() {
-	const size = parseInt(this.value);
-	makeRows(size, size);
+	defaultSize = parseInt(this.value);
+	makeRows(defaultSize, defaultSize);
 })
 
 /* Function for the hover efect on cells */
 /* Change background color of the cell when hovered */
-function hoverFunc(color = "black") {
-	this.classList.add("hoveredGrid");
+color.addEventListener("change", function(e) {
+	defaultColor = e.target.value;
+})
+function hoverFunc(e, color = defaultColor) {
+	this.style.backgroundColor = color;
 }
 
 /* Function that creates rows and columns */
@@ -29,18 +38,16 @@ const makeRows = (rows, cols) => {
 
 	for(let i = 0; i < (rows * cols); i++) {
 		let cell = document.createElement("div");
-		cell.className = "gridItem";
 		cell.addEventListener("mouseover", hoverFunc);
 		container.appendChild(cell);
-		cell.classList.remove("hoveredGrid");
 	}
 }
 
 /* Function to Clear the grid */
 const clearGrid = () => {
-	makeRows(16, 16)
+	makeRows(defaultSize, defaultSize)
 }
 
 btnClear.addEventListener("click", clearGrid);
 
-makeRows(16, 16);
+makeRows(defaultSize, defaultSize);
