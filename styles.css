@@ -54,20 +54,27 @@ input[type="color"]::-webkit-color-swatch {
 	cursor: pointer;
 }
 
-/* Clear Button */
-.clearBtn {
+/* Clear Button - Rainbow Button */
+.button {
 	transition: all .3s;
+	width: 135px;
 	padding: 10px 36px;
 	border: 1px solid #454545;
 	border-radius: 6px;
 	background-color: transparent;
 	font-size: 16px;
 }
-.clearBtn:hover {
+.button:hover {
 	background-color: #454545;
 	color: #dadada;
 	font-weight: bold;
 	cursor: pointer;
+}
+
+.buttonActive {
+	background-color: #454545;
+	font-family: bold;
+	color: #dadada;
 }
 
 /* Size Input Container */
