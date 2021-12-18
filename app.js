@@ -1,5 +1,5 @@
 /* Set Default Values */
-let defaultColor = "#009E3D";
+let defaultColor = "#FF0000";
 let defaultSize = 16;
 
 /* Mode Rainbow */

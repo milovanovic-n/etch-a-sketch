@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-a-Sketch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!--Title-->
-  <h1 id="title">Etch a Sketch</h1>
+  <h1 id="title">Etch-a-Sketch</h1>
 
   <div class="main">
     <!--Sidebar-->
     <aside class="sidebar">
-			<input id="color" class="color" type="color" value="#009E3D">
+      <button class="button selectColor">
+        <span>Pick</span>
+        <input id="color" class="color" type="color" value="#FF0000">
+      </button>
       <button id="rainbow" class="button">Rainbow</button>
 			<button id="clear" class="button">Clear</button>
-      <div class="sizeContainer">
-        <span id="displaySize" class="displaySize">16x16</span>
-        <input class="size" id="size" type="range" value="16" step="1" max="64" min="1">
-      </div>
+      
   	</aside>
 
     <!--Grid Container-->
     <div id="container">
 
+    </div>
+    <!-- Range Input -->
+    <div class="sizeContainer">
+      <span id="displaySize" class="displaySize">Pixel Size: 16x16</span>
+      <input class="size" id="size" type="range" value="16" step="1" max="64" min="1">
     </div>
   </div>
 

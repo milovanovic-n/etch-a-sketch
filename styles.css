@@ -2,41 +2,51 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Audiowide', cursive;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #292929;
 }
 
 /* Title */
 #title {
 	margin: 45px 0;
+	font-size: 38px;
+	color: #FF0000;
 }
 
 /* Main Container */
 .main {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	gap: 25px;
 }
 
 /* Aside */
 aside {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	font-size: 1.3rem;
+	justify-content: space-evenly;
+	align-items: center;
 	gap: 20px;
 }
 
 /* Color Input */
+.selectColor {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
 input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
-	width: 60px;
-	height: 60px;
+	width: 25px;
+	height: 25px;
 	background: none;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -58,14 +68,15 @@ input[type="color"]::-webkit-color-swatch {
 .button {
 	transition: all .3s;
 	width: 135px;
-	padding: 10px 36px;
-	border: 1px solid #454545;
+	padding: 10px 24px;
+	border: 1px solid #FF0000;
 	border-radius: 6px;
-	background-color: transparent;
+	background-color: black;
+	color: #FF0000;
 	font-size: 16px;
 }
 .button:hover {
-	background-color: #454545;
+	border: 1px solid #ffffff;
 	color: #dadada;
 	font-weight: bold;
 	cursor: pointer;
@@ -86,6 +97,8 @@ input[type="color"]::-webkit-color-swatch {
 /* Size Input Text */
 .displaySize {
 	font-size: 1.2rem;
+	color: #000000;
+	text-shadow: -2px 0 rgb(255, 0, 0), 0 2px rgb(255, 0, 0), 2px 0 rgb(255, 0, 0), 0 -2px rgb(255, 0, 0);
 }
 /* Input Size */
 .size {
@@ -94,6 +107,31 @@ input[type="color"]::-webkit-color-swatch {
 .size:hover {
 	transform: scale(1.3);
 	cursor: pointer;
+}
+
+input[type="range"] {
+	overflow: hidden;
+  width: 70%;
+  -webkit-appearance: none;
+  background-color: #FF0000;
+	border-radius: 8px;
+}
+input[type='range']::-webkit-slider-runnable-track {
+	height: 16px;
+	-webkit-appearance: none;
+	color: #000000;
+	margin-top: -1px;
+}
+input[type='range']::-webkit-slider-thumb {
+	width: 12px;
+	-webkit-appearance: none;
+	height: 16px;
+	cursor: ew-resize;
+	background: #000000;
+	box-shadow: -70% 0 0 70% #000000;
+}
+input[type='range']::-webkit-slider-thumb:hover {
+	transform: scale(1.2);
 }
 
 
@@ -107,6 +145,7 @@ input[type="color"]::-webkit-color-swatch {
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
 	box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+	background-color: #ffffff;
 }
 
 /* Grid Item */
